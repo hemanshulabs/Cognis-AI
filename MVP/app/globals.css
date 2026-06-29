@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+:root {
+  --one-if-corner-shape-supported: 1;
+  --token-78f32a64-abed-48bb-94c7-5137e0a39b57: #f1ece8;
+  --token-763e638a-abd2-48dc-83b6-98448def1b71: #000;
+  --token-77a03c3b-4063-4180-a76c-51ba23fdad40: #4a4a4a;
+  --token-7a7868b5-5b3e-4341-b3c3-5b41416c2683: #322c2b;
+  --token-6b4d551f-abc7-4798-8831-cc319d5ef2d6: #d1c5bc;
+  --token-cbb8bb8c-e12e-4a90-aabd-25c7814c32c0: #827367;
+  --token-78e1d5ca-6c4e-4189-bf20-19db18272425: #fff;
+  --token-76dddd49-60e3-41f2-ae71-9ebb57638e06: #695a57;
+  --token-e6922d36-a5e5-420a-a471-6c96851adee5: #f40;
+  --framer-will-change-override: none;
+  --framer-will-change-filter-override: none;
+  --framer-aspect-ratio-supported: auto;
+  --background: var(--token-78f32a64-abed-48bb-94c7-5137e0a39b57);
+  --foreground: var(--token-7a7868b5-5b3e-4341-b3c3-5b41416c2683);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes cognis-caret {
+  0%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cognis-type {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes cognis-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cognis-pulse-step {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes cognis-step-one {
+  0%,
+  18%,
+  100% {
+    background: #f1ece8;
+    color: #d1c5bc;
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  6%,
+  12% {
+    background: #322c2b;
+    color: #f1ece8;
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes cognis-step-two {
+  0%,
+  18%,
+  42%,
+  100% {
+    background: #f1ece8;
+    color: #d1c5bc;
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  24%,
+  36% {
+    background: #322c2b;
+    color: #f1ece8;
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes cognis-step-three {
+  0%,
+  42%,
+  66%,
+  100% {
+    background: #f1ece8;
+    color: #d1c5bc;
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  48%,
+  60% {
+    background: #322c2b;
+    color: #f1ece8;
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes cognis-step-four {
+  0%,
+  66% {
+    background: #f1ece8;
+    color: #d1c5bc;
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  72%,
+  92%,
+  100% {
+    background: #322c2b;
+    color: #f1ece8;
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes cognis-step-text {
+  0%,
+  100% {
+    color: #d1c5bc;
+    opacity: 0.55;
+  }
+  50% {
+    color: #322c2b;
+    opacity: 1;
+  }
+}
+
+@keyframes cognis-skeleton {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+.typing-caret::after {
+  content: "";
+  display: inline-block;
+  width: 0.42em;
+  height: 1em;
+  margin-left: 0.12em;
+  background: currentColor;
+  vertical-align: -0.14em;
+  animation: cognis-caret 0.82s steps(1) infinite;
+}
+
+.typewriter-reveal {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  animation: cognis-type var(--typing-duration, 4s) steps(var(--typing-steps, 60), end) infinite;
+}
+
+.typewriter-reveal::after {
+  content: "";
+  display: inline-block;
+  width: 0.42em;
+  height: 1em;
+  margin-left: 0.12em;
+  background: currentColor;
+  vertical-align: -0.14em;
+  animation: cognis-caret 0.82s steps(1) infinite;
+}
+
+.loader-ring {
+  animation: cognis-spin 0.9s linear infinite;
+}
+
+.active-step-dot {
+  animation: cognis-pulse-step 1.6s ease-in-out infinite;
+}
+
+.workflow-step-dot {
+  animation-duration: 5.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.workflow-step-dot-0 {
+  animation-name: cognis-step-one;
+}
+
+.workflow-step-dot-1 {
+  animation-name: cognis-step-two;
+}
+
+.workflow-step-dot-2 {
+  animation-name: cognis-step-three;
+}
+
+.workflow-step-dot-3 {
+  animation-name: cognis-step-four;
+}
+
+.workflow-step-text {
+  animation: cognis-step-text 5.2s ease-in-out infinite;
+}
+
+.workflow-step-text-1 {
+  animation-delay: 1.2s;
+}
+
+.workflow-step-text-2 {
+  animation-delay: 2.4s;
+}
+
+.workflow-step-text-3 {
+  animation-delay: 3.6s;
+}
+
+.skeleton-sheen {
+  overflow: hidden;
+  position: relative;
+}
+
+.skeleton-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 45%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.72), transparent);
+  animation: cognis-skeleton 1.7s ease-in-out infinite;
+}
+
+.typing-animation-cursor {
+  display: inline-block;
+  margin-left: 0.08em;
+  animation: cognis-caret 0.82s steps(1) infinite;
+}

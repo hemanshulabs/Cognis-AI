@@ -1,0 +1,1060 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Cognis: SBI Hackathon @ GFF 2026</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="16dd8270-36d9-425b-b1fa-611336f35306" class="page sans"><header><img class="page-cover-image" src="https://app.notion.com/images/page-cover/woodcuts_16.jpg" style="object-position:center 100%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">⚡</span></div><h1 class="page-title" dir="auto">Cognis: SBI Hackathon @ GFF 2026</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="ltr"><nav id="2626bc78-989c-4a52-a7b1-ea13e12a7db8" class="table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ab147650-3439-4c01-bc75-b7eff5c90188">1. Problem Statement</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#03bfae33-45ba-4742-8920-72acbbd72517">2. Business Context &amp; Objectives</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c6aaa4d5-a3be-4581-b7cd-4130ac42272a">3. Solution Overview</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#19d821c0-eb76-4fec-91a9-8a6b85438948">3.1 The idea</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#af99205d-8412-4f75-9026-38c27a2900ac">3.2 Capabilities</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#66af03a0-001b-480d-8677-6c0104585f8a">4. High-Level System Design</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c7b3b153-6915-48e7-8bba-c751559ce634">5. Agentic Architecture — Cognis &amp; Its Sub-Agents</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f81d613c-572c-4566-aa67-e0e5aa981b93">5.1 The sub-agent family</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#502cb7c9-75b6-4b6d-897d-c4ccdfdc17aa">5.2 How Cognis orchestrates its children</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2a4e4434-0325-4adc-ba79-3ae9c79ab382">5.3 How the agents communicate</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#853d11eb-b2f4-47a1-91f4-056ca102a2a4">6. Event-to-Engagement Flow</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f705afb0-45a0-4279-8de0-1b928e6ce388">7. NBA Decision Logic</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c2eecadd-ad7e-410f-83ac-0b86d901f422">8. Deployment / Production Architecture</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a4d3e8ca-767e-4fd7-ac67-4d062330a7a8">9. Data Model (MVP)</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#14af6f72-137b-4911-9b01-990610024683">10. Customer Journey Lifecycle</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a9ae9f75-e101-4971-b5c7-c909ea543268">11. Business Model &amp; Commercial Potential</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2320c2db-1194-4264-a811-fbeac562e89d">11.1 Who this is for</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0a75179e-fa45-4140-b14a-9680b2d322ef">11.2 Revenue streams</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#54d721db-426d-4544-b0e7-2523c3cae3f9">12. Technology Stack (Hackathon MVP)</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#56791292-8493-442a-80a9-a1e25a379ddb">13. Implementation Roadmap</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#734536e4-11f2-4568-9832-2427ac632a33">Phase 1: Hackathon MVP (24–48 hours)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6cea89b4-0fd3-48b0-b65b-227200ad376d">Phase 2: ML and a Smarter NBA</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2287a256-92df-4eea-b1cf-43f7454686c4">Phase 3: Production</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#12661d1e-9862-4b94-a70f-5e1388ba0d7b">14. Presentation Diagrams</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1429031a-5b3e-42f6-bc9e-5db41ac8c783">14.1 Detailed — Full Engagement Engine (single slide)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f92860b7-d6e1-4c0d-9243-a1885a7db554">14.2 Small — Core Decision Loop</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#3eeb63ed-8ecb-4b9b-b251-673b8e6adf6f">14.3 At a Glance</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9d46dabe-d7db-4e9b-8a36-50b19e47ba4b">15. Architecture Reference &amp; Technology Rationale</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#74b054ec-92fc-4952-b2cb-17a2fa47ac8b">15.1 System Architecture &amp; Flow</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b275d54d-5698-4485-b0b4-82bef078b91c">15.2 Technology Flow — What &amp; Why</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c704c422-3653-497a-974a-1c2f99cccb15">15.3 Production Technology Stack</a></div></nav></div><div style="display:contents" dir="auto"><hr id="009b28a9-86c4-4219-8b05-157ec280d997"/></div><div style="display:contents" dir="auto"><h2 id="ab147650-3439-4c01-bc75-b7eff5c90188" class="">1. Problem Statement</h2></div><div style="display:contents" dir="auto"><p id="4f0c42fb-7c77-43c0-b38d-a3e332351081" class=""><strong>Title:</strong> AI-Driven Financial Digital Engagement Engine</p></div><div style="display:contents" dir="auto"><p id="46d2b37a-0ba4-4db8-b5e1-ac3612750e5e" class="">Most banking and fintech apps send the same message to everyone. A batch campaign goes out on a schedule, regardless of whether it fits the customer&#x27;s situation, and it rarely reflects what the person is doing with their money. Cognis takes a different approach. It follows real activity, detects patterns and life events as they occur, and responds with an action that is useful at that moment. The entire MVP runs on free or open-source tools.</p></div><div style="display:contents" dir="auto"><p id="48e9cb8b-40d4-483e-8797-cf0cfec40d93" class=""><strong>Requirements</strong></p></div><div style="display:contents" dir="auto"><ul id="1f15d4d3-99cc-4a2f-9220-cc73b61e707d" class="bulleted-list"><li style="list-style-type:disc">Ingest financial and behavioural events in near real time.</li></ul></div><div style="display:contents" dir="auto"><ul id="124f9591-e41c-43d8-897a-3f92b4de98c4" class="bulleted-list"><li style="list-style-type:disc">Maintain a lightweight profile per customer, plus derived metrics such as 30-day spend and low-balance streak.</li></ul></div><div style="display:contents" dir="auto"><ul id="feeb9b87-8120-4c61-a424-fdeaaf4f7e75" class="bulleted-list"><li style="list-style-type:disc">Determine the next best action using rules, a model, or both.</li></ul></div><div style="display:contents" dir="auto"><ul id="f21fd768-6699-4df8-bd62-c14da0741421" class="bulleted-list"><li style="list-style-type:disc">Reach the customer on at least one channel: in-app, email, or SMS.</li></ul></div><div style="display:contents" dir="auto"><ul id="292f585c-3fe0-43ea-9d32-927bbf3b0121" class="bulleted-list"><li style="list-style-type:disc">Demonstrate the full loop end to end: fire an event, see the response, and explain why it fired.</li></ul></div><div style="display:contents" dir="auto"><hr id="c071639b-e9a9-41b5-be76-839748c3c4e3"/></div><div style="display:contents" dir="auto"><h2 id="03bfae33-45ba-4742-8920-72acbbd72517" class="">2. Business Context &amp; Objectives</h2></div><div style="display:contents" dir="auto"><p id="f8c587d3-bf81-455c-9ddd-f5381f9b3cc9" class="">Across banking, insurance, and wealth management, customer engagement is shifting from scheduled campaigns to real-time response. The traditional routine (plan a campaign, push it to a segment, hope it lands) is giving way to reacting to current activity. Customers increasingly expect their bank to notice a salary change, a run of tight months, a trip, or a large purchase, and to respond with something that helps rather than another pitch.</p></div><div style="display:contents" dir="ltr"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="2fbb212c-0616-442d-a5c3-c76461e57cfd"><div style="font-size:1.5em"><span class="icon">🎯</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="8df81995-08a3-4cc0-8a32-70d1b954652f" class=""><strong>What the platform delivers</strong></p></div><div style="display:contents" dir="auto"><ul id="b57cc2fa-e352-45fe-b786-b9bd0ac422b5" class="bulleted-list"><li style="list-style-type:disc">Ingests events from core systems and apps.</li></ul></div><div style="display:contents" dir="auto"><ul id="1d749b28-035e-431b-9299-3f7d8cd7698c" class="bulleted-list"><li style="list-style-type:disc">Detects patterns and life events using rules and ML.</li></ul></div><div style="display:contents" dir="auto"><ul id="c186c83b-20ef-45b0-a3f7-7cfb342108f6" class="bulleted-list"><li style="list-style-type:disc">Selects actions by balancing value, risk, and compliance.</li></ul></div><div style="display:contents" dir="auto"><ul id="0d78d7a3-d24b-4da5-beb7-2b32ca871e2b" class="bulleted-list"><li style="list-style-type:disc">Sends the action, measures the response, and repeats.</li></ul></div></div></figure></div><div style="display:contents" dir="ltr"><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="7ad6e044-a73f-4ba1-bfb9-954c66f434c0"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="92e9bf1f-a401-4c94-94ce-802a9f5d49ea" class=""><strong>Scope</strong></p></div><div style="display:contents" dir="auto"><ul id="bb615cc2-7f00-4b4b-a282-5269391e4e49" class="bulleted-list"><li style="list-style-type:disc">Built on established event-driven banking patterns.</li></ul></div><div style="display:contents" dir="auto"><ul id="3996129c-4f86-4ec6-9b46-e0e45c6e2264" class="bulleted-list"><li style="list-style-type:disc">Modeled on Customer 360 architectures.</li></ul></div><div style="display:contents" dir="auto"><ul id="edc2ac76-f15d-4b52-a337-afbdf97d48ec" class="bulleted-list"><li style="list-style-type:disc">Deliberately trimmed to an MVP.</li></ul></div><div style="display:contents" dir="auto"><ul id="9e65bde7-e2c1-4c1d-b9ba-1154cbc3d6f0" class="bulleted-list"><li style="list-style-type:disc">Buildable by a small team in one to two days.</li></ul></div></div></figure></div><div style="display:contents" dir="auto"><hr id="6d9f6246-7f56-49a7-ae34-401fc1bb5c41"/></div><div style="display:contents" dir="auto"><h2 id="c6aaa4d5-a3be-4581-b7cd-4130ac42272a" class="">3. Solution Overview</h2></div><div style="display:contents" dir="auto"><h3 id="19d821c0-eb76-4fec-91a9-8a6b85438948" class="">3.1 The idea</h3></div><div style="display:contents" dir="auto"><p id="6b6dadb4-a24b-4a93-a078-7c9cb9666963" class="">Cognis is a Digital Engagement Platform (DEP). Events arrive through a gateway and a streaming layer. Each customer has a single profile, backed by a small feature store that holds the behavioural and transactional signals we track. On top of that sits a Next-Best-Action (NBA) engine, built from rules and a model, that determines the right move at any given moment, delivers it through the channel that fits (the app, email, SMS, or a CRM task), and logs the outcome so the next decision improves.</p></div><div style="display:contents" dir="auto"><h3 id="af99205d-8412-4f75-9026-38c27a2900ac" class="">3.2 Capabilities</h3></div><div style="display:contents" dir="ltr"><table id="ed8d76a8-8213-449b-8f22-bc0877b8a5f8" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="64e11da9-0e54-4345-80af-98ff4cd3ebea"><th id="gAr^" class="simple-table-header-color simple-table-header" style="width:260px">Capability</th><th id="KkQV" class="simple-table-header-color simple-table-header" style="width:560px">How it works</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="73c31236-b943-4dbc-8bf2-fef56f62260a"><td id="gAr^" class="" style="width:260px"><strong>Event ingestion</strong></td><td id="KkQV" class="" style="width:560px">Events arrive over HTTP or gRPC, are validated against a schema, and are published to the event bus. Production uses Kafka; the hackathon uses a lighter substitute.</td></tr></div><div style="display:contents" dir="ltr"><tr id="d7279a41-a53d-45e0-9935-c1a536f9ebcc"><td id="gAr^" class="" style="width:260px"><strong>Customer 360 &amp; CDP</strong></td><td id="KkQV" class="" style="width:560px">Bronze, silver, and gold data layers at the back, with a fast profile store at the front for reads that must be instant.</td></tr></div><div style="display:contents" dir="ltr"><tr id="5fbce819-67fe-41e9-bed8-83dc45e4fab0"><td id="gAr^" class="" style="width:260px"><strong>Signal computation</strong></td><td id="KkQV" class="" style="width:560px">Stream and batch jobs keep the rolling metrics current: the last 30 days of spend, how long a balance has stayed low, and login frequency.</td></tr></div><div style="display:contents" dir="ltr"><tr id="e6f14908-1d8f-41ff-93de-a639ee98db81"><td id="gAr^" class="" style="width:260px"><strong>Models &amp; rules</strong></td><td id="KkQV" class="" style="width:560px">Models for churn, propensity, and financial stress, alongside a rules engine for eligibility and the regulatory guardrails.</td></tr></div><div style="display:contents" dir="ltr"><tr id="145230e9-abb2-4614-8176-3f7d3ff5fde2"><td id="gAr^" class="" style="width:260px"><strong>NBA engine</strong></td><td id="KkQV" class="" style="width:560px">Combines the scores and rules, then ranks and selects one action for this customer at this moment.</td></tr></div><div style="display:contents" dir="ltr"><tr id="f9fff144-f59e-498f-9b98-e27025eec461"><td id="gAr^" class="" style="width:260px"><strong>Delivery</strong></td><td id="KkQV" class="" style="width:560px">Journeys, frequency caps, A/B tests, and connectors for push, email, SMS, and CRM tasks.</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="84ed5369-91d6-475d-abe7-5b569e98b4b5"/></div><div style="display:contents" dir="auto"><h2 id="66af03a0-001b-480d-8677-6c0104585f8a" class="">4. High-Level System Design</h2></div><div style="display:contents" dir="auto"><p id="05c14d4b-1f0f-485e-ae7b-240e01d6f97a" class="">Four areas carry the load: event ingestion, the customer view, AI and decisioning, and action delivery. The design follows the patterns found in any real-time engagement system.</p></div><div style="display:contents" dir="auto"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="341bdcbe-bfaf-429a-a740-84dc7e5e8ebb" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">graph LR
+    subgraph sources[&quot;Sources&quot;]
+        CB[&quot;Core Banking &amp; Cards&quot;]
+        LN[&quot;Loans &amp; BNPL&quot;]
+        CH[&quot;Mobile / Web Apps&quot;]
+        CRM[&quot;CRM &amp; Call Center&quot;]
+        EXT[&quot;External Data&lt;br&gt;(Credit bureaus, Open banking)&quot;]
+    end
+
+    subgraph ingest[&quot;Ingestion &amp; Streaming&quot;]
+        GW[&quot;API / Event Gateway&quot;]
+        SR[&quot;Schema Registry&quot;]
+        EV[&quot;Event Bus&lt;br&gt;(Kafka / Pulsar)&quot;]
+    end
+
+    subgraph data[&quot;Data &amp; Customer 360&quot;]
+        DL[&quot;Data Lakehouse&lt;br&gt;Bronze / Silver / Gold&quot;]
+        IDR[&quot;Identity Resolution&quot;]
+        C360[&quot;Customer 360 Profiles&quot;]
+        FS[&quot;Feature Store&quot;]
+    end
+
+    subgraph ai[&quot;AI &amp; Decisioning&quot;]
+        ML[&quot;ML Models&lt;br&gt;(churn, propensity, life events)&quot;]
+        RULES[&quot;Rules Engine&lt;br&gt;(eligibility, compliance)&quot;]
+        NBA[&quot;Next-Best-Action Engine&quot;]
+    end
+
+    subgraph orch[&quot;Orchestration &amp; Channels&quot;]
+        JOR[&quot;Journey Orchestrator&quot;]
+        CHN[&quot;Channel Connectors&lt;br&gt;(SMS, Email, Push, CRM)&quot;]
+    end
+
+    subgraph ops[&quot;Ops &amp; Governance&quot;]
+        ADM[&quot;Admin Console&quot;]
+        OBS[&quot;Monitoring &amp; Audit&quot;]
+    end
+
+    CB --&gt; GW
+    LN --&gt; GW
+    CH --&gt; GW
+    CRM --&gt; GW
+    EXT --&gt; GW
+
+    GW --&gt; SR
+    SR --&gt; EV
+
+    EV --&gt; DL
+    EV --&gt; IDR
+    EV --&gt; FS
+
+    DL --&gt; C360
+    IDR --&gt; C360
+    FS --&gt; ML
+    C360 --&gt; ML
+
+    EV --&gt; NBA
+    FS --&gt; NBA
+    ML --&gt; NBA
+    RULES --&gt; NBA
+
+    NBA --&gt; JOR
+    JOR --&gt; CHN
+    CHN --&gt; CH
+    CHN --&gt; CRM
+
+    ADM --- RULES
+    ADM --- JOR
+    ADM --- C360
+    OBS --- EV
+    OBS --- NBA
+    OBS --- CHN</code></pre></div><div style="display:contents" dir="auto"><hr id="8a0a9989-4f81-4dd9-9d08-5b03af762a22"/></div><div style="display:contents" dir="auto"><h2 id="c7b3b153-6915-48e7-8bba-c751559ce634" class="">5. Agentic Architecture — Cognis &amp; Its Sub-Agents</h2></div><div style="display:contents" dir="auto"><p id="590511dc-42cf-44a3-ba83-042d5084f73c" class=""><strong>Cognis</strong> is the parent agent, the &quot;knowing mind&quot; (from the Latin <em>cognoscere</em>, &quot;to recognize and know&quot;) that runs the engine, and the platform takes its name from it. Rather than a single monolithic brain, Cognis delegates. It coordinates a small family of specialist <strong>child sub-agents</strong>, each owning one job in the pipeline. Cognis routes each money moment to the right children, weighs what they return, and makes the final call. Every child shares the Latin <strong>&quot;-is&quot;</strong> ending, marking it as part of the same lineage.</p></div><div style="display:contents" dir="ltr"><figure class="block-color-purple_background callout" style="white-space:pre-wrap;display:flex" id="9b0fa8cb-62d2-4611-9843-dcddde886667"><div style="font-size:1.5em"><span class="icon">🧠</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="ebbcf0af-950b-4b91-8202-e95a252a4243" class=""><strong>In one line:</strong> Cognis is the parent orchestrator. Each sub-agent is a focused child it calls on, or spins up, for one specific task on the path from event to action.</p></div></div></figure></div><div style="display:contents" dir="auto"><h3 id="f81d613c-572c-4566-aa67-e0e5aa981b93" class="">5.1 The sub-agent family</h3></div><div style="display:contents" dir="ltr"><table id="2dbe0c37-0321-449d-a0fd-412c5d3dda68" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="95223451-a38d-479f-9966-a23a0c7fed48"><th id="FJzf" class="simple-table-header-color simple-table-header" style="width:150px">Sub-agent</th><th id="hi_}" class="simple-table-header-color simple-table-header" style="width:330px">What it owns</th><th id="LvAg" class="simple-table-header-color simple-table-header" style="width:180px">Maps to (Section 4)</th><th id="x?dK" class="simple-table-header-color simple-table-header" style="width:160px">Name root</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="4239a071-fee8-4860-8a31-955c0581844c"><td id="FJzf" class="" style="width:150px"><strong>Sensis</strong></td><td id="hi_}" class="" style="width:330px">Senses and ingests every transaction, login, and balance change the moment it happens.</td><td id="LvAg" class="" style="width:180px">Ingestion &amp; Streaming</td><td id="x?dK" class="" style="width:160px"><em>sentio</em> — &quot;to sense&quot;</td></tr></div><div style="display:contents" dir="ltr"><tr id="15019bd7-e312-41f8-af92-bca5591bd616"><td id="FJzf" class="" style="width:150px"><strong>Memoris</strong></td><td id="hi_}" class="" style="width:330px">Builds and remembers each customer&#x27;s profile, identity, and history.</td><td id="LvAg" class="" style="width:180px">Customer 360 / CDP</td><td id="x?dK" class="" style="width:160px"><em>memoria</em> — &quot;memory&quot;</td></tr></div><div style="display:contents" dir="ltr"><tr id="ce4e0fb9-99e2-4585-b5a3-648623c6cf86"><td id="FJzf" class="" style="width:150px"><strong>Auguris</strong></td><td id="hi_}" class="" style="width:330px">Forecasts churn, propensity, and financial stress from behavioural signals.</td><td id="LvAg" class="" style="width:180px">ML Models</td><td id="x?dK" class="" style="width:160px"><em>augur</em> — &quot;to foretell&quot;</td></tr></div><div style="display:contents" dir="ltr"><tr id="ff4910aa-c3c2-47b9-9beb-28a15a9b0f2a"><td id="FJzf" class="" style="width:150px"><strong>Lexis</strong></td><td id="hi_}" class="" style="width:330px">Enforces eligibility, frequency caps, and regulatory guardrails.</td><td id="LvAg" class="" style="width:180px">Rules Engine</td><td id="x?dK" class="" style="width:160px"><em>lex</em> — &quot;law&quot;</td></tr></div><div style="display:contents" dir="ltr"><tr id="419ee209-fe35-49a7-98f7-83130552324a"><td id="FJzf" class="" style="width:150px"><strong>Arbis</strong></td><td id="hi_}" class="" style="width:330px">Weighs scores, rules, and value to pick the single best next action.</td><td id="LvAg" class="" style="width:180px">NBA Engine</td><td id="x?dK" class="" style="width:160px"><em>arbiter</em> — &quot;the one who decides&quot;</td></tr></div><div style="display:contents" dir="ltr"><tr id="1af84bd6-8212-4dfc-a0cd-b52e6a25eb77"><td id="FJzf" class="" style="width:150px"><strong>Nuntis</strong></td><td id="hi_}" class="" style="width:330px">Carries the chosen message to the right channel (app, email, SMS, CRM) at the right moment.</td><td id="LvAg" class="" style="width:180px">Orchestration &amp; Channels</td><td id="x?dK" class="" style="width:160px"><em>nuntius</em> — &quot;messenger&quot;</td></tr></div><div style="display:contents" dir="ltr"><tr id="e229e76c-c55e-40a4-944c-e1da4137bea6"><td id="FJzf" class="" style="width:150px"><strong>Vigilis</strong></td><td id="hi_}" class="" style="width:330px">Watches every outcome, audits the system, and feeds results back so the next call is sharper.</td><td id="LvAg" class="" style="width:180px">Ops &amp; Governance</td><td id="x?dK" class="" style="width:160px"><em>vigil</em> — &quot;the watchman&quot;</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="502cb7c9-75b6-4b6d-897d-c4ccdfdc17aa" class="">5.2 How Cognis orchestrates its children</h3></div><div style="display:contents" dir="auto"><pre id="8b7ea2c9-fa07-4b84-9c5b-83bd0378791a" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">flowchart TD
+    COG([&quot;🧠 Cognis — parent orchestrator&quot;]):::parent
+    COG --&gt; S[&quot;👂 Sensis&lt;br&gt;Sense &amp; ingest events&quot;]
+    COG --&gt; M[&quot;🗂️ Memoris&lt;br&gt;Customer 360 &amp; memory&quot;]
+    COG --&gt; A[&quot;🔮 Auguris&lt;br&gt;Predict churn / propensity / stress&quot;]
+    COG --&gt; L[&quot;⚖️ Lexis&lt;br&gt;Rules &amp; compliance&quot;]
+    COG --&gt; AR[&quot;🎯 Arbis&lt;br&gt;Pick the next best action&quot;]
+    COG --&gt; N[&quot;📣 Nuntis&lt;br&gt;Deliver across channels&quot;]
+    COG --&gt; V[&quot;👁️ Vigilis&lt;br&gt;Monitor outcomes &amp; learn&quot;]
+    classDef parent fill:#EDE9F5,stroke:#7C5CBF,color:#3A2A66;</code></pre></div><div style="display:contents" dir="auto"><h3 id="2a4e4434-0325-4adc-ba79-3ae9c79ab382" class="">5.3 How the agents communicate</h3></div><div style="display:contents" dir="auto"><p id="abc92b24-cd25-4361-bfe5-85df84d1df45" class="">The family tree above shows who reports to whom. This view follows one event from start to finish, so the working order reads top to bottom: what each agent does, and how they hand off and report back. <strong>Sensis</strong> catches the event and passes it up to <strong>Cognis</strong>, the parent. Cognis then calls each specialist in turn (<strong>Memoris → Auguris → Lexis → Arbis</strong>), feeding each result into the next, and hands the chosen action to <strong>Nuntis</strong> for delivery. <strong>Vigilis</strong> watches the customer response and reports back to Cognis, so the next decision is sharper.</p></div><div style="display:contents" dir="auto"><pre id="456de4b7-5791-4d63-b8c7-60bc7978919b" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">flowchart TB
+    EV([&quot;A bank event happens&quot;]):::event
+    SE([&quot;Step 1 - Sensis&lt;br&gt;picks up the event&quot;]):::child
+    CO([&quot;Cognis&lt;br&gt;the parent that runs everything&quot;]):::parent
+    EV ==&gt; SE ==&gt; CO
+    subgraph WORK[&quot;Cognis calls each helper in order&quot;]
+        direction TB
+        ME([&quot;Step 2 - Memoris&lt;br&gt;knows the customer&quot;]):::child
+        AU([&quot;Step 3 - Auguris&lt;br&gt;predicts what may happen&quot;]):::child
+        LE([&quot;Step 4 - Lexis&lt;br&gt;checks the rules&quot;]):::child
+        AR([&quot;Step 5 - Arbis&lt;br&gt;picks the best action&quot;]):::child
+        ME --&gt; AU --&gt; LE --&gt; AR
+    end
+    CO ==&gt; ME
+    AR ==&gt; NU([&quot;Step 6 - Nuntis&lt;br&gt;sends the message&quot;]):::child
+    NU ==&gt; US([&quot;The customer gets the message&quot;]):::event
+    US -. responds .-&gt; VI([&quot;Step 7 - Vigilis&lt;br&gt;checks the result and learns&quot;]):::child
+    VI -. sends learning back .-&gt; CO
+    classDef parent fill:#7C5CBF,stroke:#4B2E83,color:#ffffff;
+    classDef child fill:#EDF5F4,stroke:#4F9D9D,color:#234E4E;
+    classDef event fill:#FBF4E9,stroke:#D9A441,color:#5C4326;</code></pre></div><div style="display:contents" dir="auto"><hr id="72565063-7601-4f5e-9cc9-de68d441aa21"/></div><div style="display:contents" dir="auto"><h2 id="853d11eb-b2f4-47a1-91f4-056ca102a2a4" class="">6. Event-to-Engagement Flow</h2></div><div style="display:contents" dir="auto"><p id="2e87f3f1-a048-4858-bd99-16670103d0d4" class="">The full path a single event takes, from the moment it lands to the message that goes back out.</p></div><div style="display:contents" dir="auto"><pre id="92a44509-8b9d-4289-ba64-a215c58f0c98" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">sequenceDiagram
+    participant Src as Source System
+    participant GW as API / Event Gateway
+    participant EV as Event Bus (Kafka)
+    participant SP as Stream Processor
+    participant C360 as CDP &amp; Profile Store
+    participant FS as Feature Store
+    participant ML as ML Scoring API
+    participant NBA as NBA Engine
+    participant JOR as Journey Orchestrator
+    participant CHN as Channel Connector
+    participant User as Customer / RM
+
+    Src-&gt;&gt;GW: POST event (transaction / login / EMI status)
+    GW-&gt;&gt;EV: Publish raw event (schema validated)
+    EV-&gt;&gt;SP: Consume raw event
+    SP-&gt;&gt;C360: Update profile (identity resolution, traits)
+    SP-&gt;&gt;FS: Update aggregates / features (windows, counts)
+    SP-&gt;&gt;EV: Emit trigger candidate (e.g. salary_change)
+
+    EV-&gt;&gt;NBA: Deliver trigger + customer ID
+    NBA-&gt;&gt;C360: Fetch latest profile snapshot
+    NBA-&gt;&gt;FS: Fetch feature vector
+    NBA-&gt;&gt;ML: Request scores (churn, propensity, stress)
+    ML--&gt;&gt;NBA: Return scores
+    NBA-&gt;&gt;NBA: Apply rules + constraints (rank, pick best)
+    NBA-&gt;&gt;JOR: Send selected action + context
+
+    JOR-&gt;&gt;JOR: Evaluate journey state &amp; next step
+    JOR-&gt;&gt;CHN: Request message / task delivery
+    CHN-&gt;&gt;User: Deliver push / email / SMS / CRM task
+
+    User--&gt;&gt;CHN: Open / click / ignore / convert
+    CHN-&gt;&gt;EV: Emit response event
+    EV-&gt;&gt;SP: Feed back for analytics &amp; retraining</code></pre></div><div style="display:contents" dir="auto"><hr id="89c08d03-91c6-4b63-a60a-b5e3f6ddf6b3"/></div><div style="display:contents" dir="auto"><h2 id="f705afb0-45a0-4279-8de0-1b928e6ce388" class="">7. NBA Decision Logic</h2></div><div style="display:contents" dir="auto"><p id="e236b4c4-ce9a-47d3-9ae8-3d8648847a7a" class="">A closer look at how the NBA engine handles a trigger: it checks eligibility, scores the customer, ranks the candidate actions, respects frequency caps, and loops the result back in.</p></div><div style="display:contents" dir="auto"><pre id="e0741fb9-44c9-496b-bb81-4389fdcb8a73" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">flowchart TD
+    A[&quot;Trigger candidate received&quot;] --&gt; B{&quot;Eligible?&lt;br&gt;(rules + compliance)&quot;}
+    B -- No --&gt; Z[&quot;Suppress / log only&quot;]
+    B -- Yes --&gt; C[&quot;Fetch profile + features&quot;]
+    C --&gt; D[&quot;Score: churn, propensity, stress&quot;]
+    D --&gt; E[&quot;Generate candidate actions&quot;]
+    E --&gt; F[&quot;Rank by expected value&lt;br&gt;x propensity x risk&quot;]
+    F --&gt; G{&quot;Frequency cap&lt;br&gt;or quiet hours?&quot;}
+    G -- Hit cap --&gt; H[&quot;Defer / queue for later&quot;]
+    G -- OK --&gt; I[&quot;Select best action&quot;]
+    I --&gt; J[&quot;Send to Journey Orchestrator&quot;]
+    J --&gt; K[&quot;Deliver via channel&quot;]
+    K --&gt; L[&quot;Capture response&quot;]
+    L --&gt; D</code></pre></div><div style="display:contents" dir="auto"><hr id="8293e6b6-abac-4d54-8d4e-66152c2da2c2"/></div><div style="display:contents" dir="auto"><h2 id="c2eecadd-ad7e-410f-83ac-0b86d901f422" class="">8. Deployment / Production Architecture</h2></div><div style="display:contents" dir="auto"><p id="a23e20b4-1012-4bc7-a578-7726950d465d" class="">How Cognis looks running in the cloud on Kubernetes: the microservices, the streaming cluster, the data platform, and the external systems it connects to.</p></div><div style="display:contents" dir="auto"><pre id="e0060d82-7a62-41fd-8d46-792845e707bd" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">graph TD
+    subgraph vpc[&quot;Cloud VPC&quot;]
+        subgraph k8s[&quot;Kubernetes Cluster&quot;]
+            AGW[&quot;API Gateway / Ingress&quot;]
+            AUTH[&quot;Auth &amp; IAM Service&quot;]
+
+            subgraph svc[&quot;Microservices&quot;]
+                ING[&quot;Ingestion Service&quot;]
+                TRIG[&quot;Trigger Detection&lt;br&gt;&amp; Stream Jobs&quot;]
+                C360S[&quot;Customer 360 Service&quot;]
+                FSS[&quot;Feature Store Service&quot;]
+                MLS[&quot;ML Inference Service&quot;]
+                RULESS[&quot;Rules Service&quot;]
+                NBAS[&quot;NBA Service&quot;]
+                JORS[&quot;Journey Orchestrator&quot;]
+                CHNS[&quot;Channel Connector Service&quot;]
+                ADMS[&quot;Admin Console Backend&quot;]
+            end
+
+            OBS[&quot;Observability Stack&lt;br&gt;(Prometheus, Grafana, Logs)&quot;]
+        end
+
+        subgraph streaming[&quot;Streaming Cluster&quot;]
+            KAF[&quot;Kafka / Managed Stream&quot;]
+            SR[&quot;Schema Registry&quot;]
+        end
+
+        subgraph dataplat[&quot;Data Platform&quot;]
+            DLake[&quot;Data Lake / Object Storage&quot;]
+            DW[&quot;Lakehouse / Warehouse&lt;br&gt;(BigQuery / Snowflake)&quot;]
+            PROF[&quot;Profile Store&lt;br&gt;(NoSQL / KV)&quot;]
+            FSTORE[&quot;Online Feature Store&lt;br&gt;(Redis / Dynamo)&quot;]
+        end
+    end
+
+    subgraph ext[&quot;External Systems&quot;]
+        CB[&quot;Core Banking / Cards&quot;]
+        LOAN[&quot;Loans / BNPL&quot;]
+        MOB[&quot;Mobile &amp; Web Apps&quot;]
+        CRMEXT[&quot;CRM / Call Center&quot;]
+        CHAN[&quot;Email / SMS / Push Providers&quot;]
+        EXTD[&quot;External Data / Bureaus&quot;]
+    end
+
+    MOB --&gt; AGW
+    CB --&gt; AGW
+    LOAN --&gt; AGW
+    CRMEXT --&gt; AGW
+    EXTD --&gt; AGW
+
+    AGW --&gt; AUTH
+    AGW --&gt; ING
+
+    ING --&gt; KAF
+    KAF --&gt; TRIG
+    KAF --&gt; C360S
+    KAF --&gt; FSS
+
+    TRIG --&gt; KAF
+    TRIG --&gt; FSS
+
+    C360S --&gt; PROF
+    C360S --&gt; DLake
+    DLake --&gt; DW
+
+    FSS --&gt; FSTORE
+    DW --&gt; MLS
+    FSTORE --&gt; MLS
+
+    MLS --&gt; NBAS
+    RULESS --&gt; NBAS
+    PROF --&gt; NBAS
+    FSTORE --&gt; NBAS
+
+    NBAS --&gt; JORS
+    JORS --&gt; CHNS
+    CHNS --&gt; CHAN
+    CHNS --&gt; CRMEXT
+    CHNS --&gt; MOB
+
+    ADMS --&gt; RULESS
+    ADMS --&gt; JORS
+    ADMS --&gt; C360S
+
+    NBAS -.-&gt; OBS
+    KAF -.-&gt; OBS
+    DW -.-&gt; OBS</code></pre></div><div style="display:contents" dir="auto"><hr id="62978327-8e7d-4575-a85c-0b1fa3c83fc6"/></div><div style="display:contents" dir="auto"><h2 id="a4d3e8ca-767e-4fd7-ac67-4d062330a7a8" class="">9. Data Model (MVP)</h2></div><div style="display:contents" dir="auto"><p id="47b50a08-32cd-4f39-a2ab-90a5e770f219" class="">The Phase-1 MVP runs on a minimal Supabase schema (<code>users</code>, <code>events</code>, <code>profiles</code>, <code>actions</code>), shown below as an ER model.</p></div><div style="display:contents" dir="auto"><pre id="a612bb09-4b46-4917-82c0-6cbd07d4076d" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">erDiagram
+    USERS ||--o{ EVENTS : generates
+    USERS ||--|| PROFILES : has
+    USERS ||--o{ ACTIONS : receives
+    PROFILES ||--o{ ACTIONS : triggers
+
+    USERS {
+        uuid id PK
+        text full_name
+        text email
+        text segment
+        timestamptz created_at
+    }
+    EVENTS {
+        uuid id PK
+        uuid user_id FK
+        text event_type
+        jsonb payload
+        numeric amount
+        timestamptz occurred_at
+    }
+    PROFILES {
+        uuid user_id PK
+        numeric balance
+        numeric spend_30d
+        int low_balance_streak
+        numeric salary_latest
+        numeric stress_score
+        timestamptz updated_at
+    }
+    ACTIONS {
+        uuid id PK
+        uuid user_id FK
+        text trigger
+        text nba_action
+        text channel
+        text status
+        timestamptz created_at
+    }</code></pre></div><div style="display:contents" dir="auto"><hr id="653e74c0-df30-46de-a6e7-886575b61282"/></div><div style="display:contents" dir="auto"><h2 id="14af6f72-137b-4911-9b01-990610024683" class="">10. Customer Journey Lifecycle</h2></div><div style="display:contents" dir="auto"><p id="c17a838f-e343-4ef1-9226-e73a74cb4707" class="">The states the Journey Orchestrator moves each customer through: idle, triggered, the decision, delivery, engagement, and conversion.</p></div><div style="display:contents" dir="auto"><pre id="09867ce3-f007-48ed-bc04-4b08f46df602" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">stateDiagram-v2
+    [*] --&gt; Idle
+    Idle --&gt; Triggered : event detected
+    Triggered --&gt; Decisioned : NBA selects action
+    Decisioned --&gt; Delivered : channel sends
+    Delivered --&gt; Engaged : open / click
+    Delivered --&gt; Ignored : no response (timeout)
+    Engaged --&gt; Converted : desired outcome
+    Engaged --&gt; Idle : no conversion
+    Ignored --&gt; Idle : cooldown
+    Converted --&gt; [*]</code></pre></div><div style="display:contents" dir="auto"><hr id="be13d439-3393-45bc-b037-d1915611cae0"/></div><div style="display:contents" dir="auto"><h2 id="a9ae9f75-e101-4971-b5c7-c909ea543268" class="">11. Business Model &amp; Commercial Potential</h2></div><div style="display:contents" dir="auto"><h3 id="2320c2db-1194-4264-a811-fbeac562e89d" class="">11.1 Who this is for</h3></div><div style="display:contents" dir="auto"><ul id="49e98b6e-19de-4da5-b4a1-c1842dc2ecb0" class="bulleted-list"><li style="list-style-type:disc"><strong>Mid-market banks and regional credit unions</strong> that want this kind of engagement but have no appetite for building a CDP and NBA stack from scratch.</li></ul></div><div style="display:contents" dir="auto"><ul id="682b8583-ae09-477a-a050-6b232895b646" class="bulleted-list"><li style="list-style-type:disc"><strong>Neobanks, wallets, and BNPL providers</strong> that compete on experience rather than price and need a clear differentiator.</li></ul></div><div style="display:contents" dir="auto"><ul id="74af2c44-a541-4dcc-ad1a-ed1bfa65a8b0" class="bulleted-list"><li style="list-style-type:disc"><strong>Wealth managers and insurers</strong> that want to put next-best-action in front of their advisors and policyholders.</li></ul></div><div style="display:contents" dir="auto"><h3 id="0a75179e-fa45-4140-b14a-9680b2d322ef" class="">11.2 Revenue streams</h3></div><div style="display:contents" dir="ltr"><table id="3eefe1d5-38e0-4b40-b3df-455b2a70943c" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="b310d945-c40f-4508-8f12-ca308c9644b2"><th id="fOTc" class="simple-table-header-color simple-table-header" style="width:260px">Stream</th><th id="SOlV" class="simple-table-header-color simple-table-header" style="width:560px">How it is charged</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="c217b397-9d24-4971-85f4-3787a415d2cf"><td id="fOTc" class="" style="width:260px"><strong>Tiered SaaS</strong></td><td id="SOlV" class="" style="width:560px">A subscription priced on active profiles or monthly active users, as most CDP vendors do.</td></tr></div><div style="display:contents" dir="ltr"><tr id="7ed51fbf-551f-478f-850d-0ad78ceb5c4c"><td id="fOTc" class="" style="width:260px"><strong>Usage-based</strong></td><td id="SOlV" class="" style="width:560px">Pay for what you run: events processed, decisions made, messages sent.</td></tr></div><div style="display:contents" dir="ltr"><tr id="bb43d089-c198-4240-b719-06d7193f23d6"><td id="fOTc" class="" style="width:260px"><strong>Professional services</strong></td><td id="SOlV" class="" style="width:560px">Hands-on help with data integration and custom model development.</td></tr></div><div style="display:contents" dir="ltr"><tr id="cd61b185-005a-4f2b-ac0e-04a00b8b981b"><td id="fOTc" class="" style="width:260px"><strong>Marketplace</strong></td><td id="SOlV" class="" style="width:560px">Ready-made playbooks and model packs that drop straight in.</td></tr></div></tbody></table></div><div style="display:contents" dir="ltr"><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="4fbd3c7a-80d9-43d4-a2cb-8c1968f0ace3"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="7f902c79-4aea-4f77-9854-9deb7855c7d1" class="">Most banks run on scattered data and ageing systems, so an engagement layer they can plug in has real pull.</p></div></div></figure></div><div style="display:contents" dir="auto"><hr id="80177ab5-7f52-4486-a60a-2a48bed3fe4a"/></div><div style="display:contents" dir="auto"><h2 id="54d721db-426d-4544-b0e7-2523c3cae3f9" class="">12. Technology Stack (Hackathon MVP)</h2></div><div style="display:contents" dir="ltr"><table id="a4c44d24-1c6c-45ca-95ef-2df9444e0c5b" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="7bff6984-42a0-4243-8682-96dc306befb6"><th id="dWqV" class="simple-table-header-color simple-table-header" style="width:201px">Layer</th><th id="&lt;bh\" class="simple-table-header-color simple-table-header" style="width:580px">What we would reach for (free tier)</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="db970b75-bccc-425c-9ce7-6e28c7ff8cd6"><th id="dWqV" class="simple-table-header-color simple-table-header" style="width:201px"><strong>Frontend</strong></th><td id="&lt;bh\" class="" style="width:580px">React + TypeScript or Next.js, styled with Tailwind or Chakra. Deploy on Vercel&#x27;s free Hobby tier and you still get the global CDN and CI/CD.</td></tr></div><div style="display:contents" dir="ltr"><tr id="5c3dcd1a-6eb7-4914-9098-130a943e5492"><th id="dWqV" class="simple-table-header-color simple-table-header" style="width:201px"><strong>Backend &amp; API</strong></th><td id="&lt;bh\" class="" style="width:580px">Node.js + TypeScript on Express or Fastify, or Supabase Edge Functions on Deno. Three endpoints carry most of the work: <code>POST /events</code>, <code>GET /profile/:id</code>, <code>GET /actions/:id</code>.</td></tr></div><div style="display:contents" dir="ltr"><tr id="08df3e08-1e2b-426d-87a4-4b2aee1ad633"><th id="dWqV" class="simple-table-header-color simple-table-header" style="width:201px"><strong>Database &amp; Auth</strong></th><td id="&lt;bh\" class="" style="width:580px">Supabase&#x27;s free tier covers Postgres, Auth, Storage, and Realtime: 500 MB of database, 50,000 monthly active users, 1 GB of files.</td></tr></div><div style="display:contents" dir="ltr"><tr id="6129ce4f-1c3c-430d-8b32-cc7b29edcd52"><th id="dWqV" class="simple-table-header-color simple-table-header" style="width:201px"><strong>Event streaming</strong></th><td id="&lt;bh\" class="" style="width:580px">For the hackathon, simulate the stream with Supabase Realtime and a few DB triggers. Move to Kafka or Flink for production.</td></tr></div><div style="display:contents" dir="ltr"><tr id="cf325f4b-9f8f-44ba-b6b9-aa09cc14b433"><th id="dWqV" class="simple-table-header-color simple-table-header" style="width:201px"><strong>ML &amp; AI</strong></th><td id="&lt;bh\" class="" style="width:580px">Python (FastAPI) or Node. Churn and propensity from scikit-learn or XGBoost, stress scored with simple rules, and optionally an LLM to write the message and explain the decision.</td></tr></div><div style="display:contents" dir="ltr"><tr id="5ee3dc30-e382-4400-b6c9-642ddde584a9"><th id="dWqV" class="simple-table-header-color simple-table-header" style="width:201px"><strong>Analytics &amp; monitoring</strong></th><td id="&lt;bh\" class="" style="width:580px">SQL and dashboards in Supabase, plus Vercel&#x27;s logs and analytics for the frontend and API.</td></tr></div></tbody></table></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e7a7e992-9fd7-46e4-9601-b8df4bc5c1bb"><div style="font-size:1.5em"><span class="icon">🔄</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="e7296490-b973-4ab8-b652-9af8d53183d7" class=""><strong>Another free database option:</strong> Neon&#x27;s serverless Postgres free tier gives roughly 0.5 GB of storage and 100 compute hours per project each month, with no card required. It is worth considering if you want more direct control over Postgres and plan to host the backend yourself.</p></div></div></figure></div><div style="display:contents" dir="auto"><hr id="2caf7e69-7325-43cd-bc49-0f93f1d2a96f"/></div><div style="display:contents" dir="auto"><h2 id="56791292-8493-442a-80a9-a1e25a379ddb" class="">13. Implementation Roadmap</h2></div><div style="display:contents" dir="auto"><h3 id="734536e4-11f2-4568-9832-2427ac632a33" class="">Phase 1: Hackathon MVP (24–48 hours)</h3></div><div style="display:contents" dir="auto"><ul id="c80dab77-e4ba-4c0a-84ec-934056cd41fc" class="bulleted-list"><li style="list-style-type:disc">Set up the Supabase tables: <code>users</code>, <code>events</code>, <code>profiles</code>, <code>actions</code>.</li></ul></div><div style="display:contents" dir="auto"><ul id="fe2cea02-f41f-4941-be78-54a84d275e95" class="bulleted-list"><li style="list-style-type:disc">Build the <code>/events</code> API and a Supabase Realtime subscription so new events appear live.</li></ul></div><div style="display:contents" dir="auto"><ul id="aca3ac1f-5ad8-4877-8dd8-1ab1e370faa8" class="bulleted-list"><li style="list-style-type:disc">Start with two rule-based triggers: a <strong>salary change</strong> (compare the latest salary event against the previous one) and <strong>financial stress</strong> (several low-balance or missed-payment events within 30 days).</li></ul></div><div style="display:contents" dir="auto"><ul id="1816dcd0-0f50-49f5-9854-e35a9d98a019" class="bulleted-list"><li style="list-style-type:disc">Keep the NBA rule-based for now (no model yet) and surface the actions in an in-app feed.</li></ul></div><div style="display:contents" dir="auto"><ul id="73c7af27-6122-4cf1-b2ba-317325e5a165" class="bulleted-list"><li style="list-style-type:disc">Add a simple admin dashboard that counts triggers, actions, and conversions.</li></ul></div><div style="display:contents" dir="auto"><h3 id="6cea89b4-0fd3-48b0-b65b-227200ad376d" class="">Phase 2: ML and a Smarter NBA</h3></div><div style="display:contents" dir="auto"><ul id="612486d3-8109-4775-a50e-6143b9a40a04" class="bulleted-list"><li style="list-style-type:disc">Pull the Supabase data into a notebook for analysis.</li></ul></div><div style="display:contents" dir="auto"><ul id="25d67d2d-75cf-403e-9a1e-56c6677c6de5" class="bulleted-list"><li style="list-style-type:disc">Train a basic churn or stress model and stand it up as a small scoring service.</li></ul></div><div style="display:contents" dir="auto"><ul id="2eb74678-b272-469d-881d-3e235e3ff9a0" class="bulleted-list"><li style="list-style-type:disc">Feed those scores into the NBA so it ranks actions on more than rules alone.</li></ul></div><div style="display:contents" dir="auto"><h3 id="2287a256-92df-4eea-b1cf-43f7454686c4" class="">Phase 3: Production</h3></div><div style="display:contents" dir="auto"><ul id="f42e1a88-88eb-48f0-976f-8a9cdd092754" class="bulleted-list"><li style="list-style-type:disc">Replace the stand-in event stream with Kafka or Flink.</li></ul></div><div style="display:contents" dir="auto"><ul id="2f5cbe2a-1834-48a8-841b-104ea4c986e7" class="bulleted-list"><li style="list-style-type:disc">Build a full CDP with identity resolution and a real feature store.</li></ul></div><div style="display:contents" dir="auto"><ul id="e6e3c9e1-683b-42e6-8b72-0949ad6d64e6" class="bulleted-list"><li style="list-style-type:disc">Add multi-tenancy, full role-based access, and the supporting governance.</li></ul></div><div style="display:contents" dir="auto"><pre id="b914674b-e0d7-4f81-8b81-b438f086bacf" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">gantt
+    title Cognis Implementation Roadmap
+    dateFormat YYYY-MM-DD
+    axisFormat %b %d
+    section Phase 1 - Hackathon MVP
+    Supabase schemas            :p1a, 2026-06-23, 1d
+    Events API + Realtime       :p1b, after p1a, 1d
+    Rule-based triggers + NBA   :p1c, after p1b, 1d
+    Admin dashboards            :p1d, after p1c, 1d
+    section Phase 2 - ML &amp; Smarter NBA
+    Data export + training      :p2a, after p1d, 5d
+    Scoring service             :p2b, after p2a, 4d
+    Rules + scores in NBA       :p2c, after p2b, 3d
+    section Phase 3 - Production
+    Kafka / Flink streaming     :p3a, after p2c, 10d
+    CDP + feature store         :p3b, after p3a, 10d
+    Multi-tenant + governance   :p3c, after p3b, 10d</code></pre></div><div style="display:contents" dir="auto"><hr id="3fd26f1a-4974-47ba-a346-8ea289d0f98d"/></div><div style="display:contents" dir="auto"><h2 id="12661d1e-9862-4b94-a70f-5e1388ba0d7b" class="">14. Presentation Diagrams</h2></div><div style="display:contents" dir="ltr"><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="a6c1ce41-b7c4-4cdc-a396-b81601e131cc"><div style="font-size:1.5em"><span class="icon">🎯</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="d61c988b-4609-4d21-9f96-f2fbe119bce3" class="">Two slide-ready views compress the whole document into a single glance: a <strong>detailed</strong> end-to-end architecture and a <strong>compact</strong> core decision loop. Both are built for the deck.</p></div></div></figure></div><div style="display:contents" dir="auto"><h3 id="1429031a-5b3e-42f6-bc9e-5db41ac8c783" class="">14.1 Detailed — Full Engagement Engine (single slide)</h3></div><div style="display:contents" dir="auto"><pre id="eba11521-7d7d-4959-a7a4-1a084736cf4c" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">flowchart TB
+    A([&quot;📥 Something happens&lt;br&gt;a swipe, a login, an EMI is due&quot;]):::step
+    B([&quot;⚡ We notice it right away&lt;br&gt;events flow in as they occur&quot;]):::step
+    C([&quot;👤 We remember the person&lt;br&gt;their balance, spending, recent salary&quot;]):::step
+    D{&quot;🧠 What would genuinely help?&lt;br&gt;a few rules and a model weigh in&quot;}:::think
+    E([&quot;📣 We reach out, gently&lt;br&gt;in the app, an email, or a quick SMS&quot;]):::step
+    F([&quot;🙋 They respond their way&lt;br&gt;they open it, act on it, or let it pass&quot;]):::step
+    A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F
+    F -. and each time, we get a little sharper .-&gt; C
+    classDef step fill:#FBF4E9,stroke:#D9A441,color:#5C4326;
+    classDef think fill:#EDF5F4,stroke:#4F9D9D,color:#234E4E;</code></pre></div><div style="display:contents" dir="auto"><h3 id="f92860b7-d6e1-4c0d-9243-a1885a7db554" class="">14.2 Small — Core Decision Loop</h3></div><div style="display:contents" dir="auto"><pre id="372230b7-7a04-419a-ba36-be80b91d6be9" class="code code-wrap"><code class="language-mermaid" style="white-space:pre-wrap;word-break:break-all">flowchart TB
+    E([&quot;📥 A money moment&quot;]):::step
+    P([&quot;👤 We see who they are&quot;]):::step
+    N{&quot;🧠 Decide the best nudge&quot;}:::think
+    C([&quot;📣 Send it their way&quot;]):::step
+    R([&quot;🙋 See how they take it&quot;]):::step
+    E --&gt; P --&gt; N --&gt; C --&gt; R
+    R -. learn, then do better .-&gt; N
+    classDef step fill:#FBF4E9,stroke:#D9A441,color:#5C4326;
+    classDef think fill:#EDF5F4,stroke:#4F9D9D,color:#234E4E;</code></pre></div><div style="display:contents" dir="auto"><h3 id="3eeb63ed-8ecb-4b9b-b251-673b8e6adf6f" class="">14.3 At a Glance</h3></div><div style="display:contents" dir="ltr"><table id="38b24bb3-6d0a-8001-8028-efde6734fd6d" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="38b24bb3-6d0a-80a6-a2ba-ed8b578d2878"><th id="SVOB" class="simple-table-header-color simple-table-header" style="width:397.21250915527344px">HOW IT WORKS</th><th id="R~bx" class="simple-table-header-color simple-table-header" style="width:448px">OUR UNFAIR ADVANTAGE</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="61bb74c0-5652-4e60-afe4-ad04be29c704"><td id="SVOB" class="" style="width:397.21250915527344px"><strong>Catches events as they happen</strong><br/>As soon as a payment clears or a balance dips, Cognis picks it up.</td><td id="R~bx" class="" style="width:448px"><strong>Built around real moments</strong><br/>When a raise lands or a month turns tight, the response fits the moment rather than a fixed schedule.</td></tr></div><div style="display:contents" dir="ltr"><tr id="5202f4d0-6272-471c-a54e-a9d68135f1ed"><td id="SVOB" class="" style="width:397.21250915527344px"><strong>One profile per customer</strong><br/>Each customer&#x27;s balance, spending, and history stay in one place.</td><td id="R~bx" class="" style="width:448px"><strong>Cognis runs the show</strong><br/>Each job goes to the agent that handles it best, and the final call returns to Cognis.</td></tr></div><div style="display:contents" dir="ltr"><tr id="1618cd39-c897-4810-ae97-34e0cc9f8826"><td id="SVOB" class="" style="width:397.21250915527344px"><strong>Spots the patterns that matter</strong><br/>For example, how much someone spent this month, or how long a balance has stayed low.</td><td id="R~bx" class="" style="width:448px"><strong>Compliance comes first</strong><br/>Nothing reaches a customer until it clears the SBI and RBI guidelines.</td></tr></div><div style="display:contents" dir="ltr"><tr id="53718a69-5092-4642-b4ec-7eb3368587b6"><td id="SVOB" class="" style="width:397.21250915527344px"><strong>Decides the next step</strong><br/>It settles on the one action that fits that person right now.</td><td id="R~bx" class="" style="width:448px"><strong>Sharper with every interaction</strong><br/>Whether a message is acted on or ignored, that shapes what comes next.</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="30b3b6a8-b572-42d3-9a83-f70a24a9659b"/></div><div style="display:contents" dir="auto"><h2 id="9d46dabe-d7db-4e9b-8a36-50b19e47ba4b" class="">15. Architecture Reference &amp; Technology Rationale</h2></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bff01d6a-54a6-4353-a7ab-10c9ce895938"><div style="font-size:1.5em"><span class="icon">🗂️</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="ccb2e018-acf4-42dc-9c94-9f4761371a58" class="">This section collects the final architecture diagrams, the production technology stack, and the rationale for each technology choice.</p></div></div></figure></div><div style="display:contents" dir="auto"><h3 id="74b054ec-92fc-4952-b2cb-17a2fa47ac8b" class="">15.1 System Architecture &amp; Flow</h3></div><div style="display:contents" dir="auto"><p id="368eaafd-199f-4123-bd97-d4a373e9cd20" class="">A single-frame view of how a money moment travels through Cognis: channels in, the main pipeline (ingestion, stream, processing, scoring, guardrails, delivery), the data layer (Redis, PostgreSQL, S3), and the cross-cutting foundations (security, containers, monitoring).</p></div><div style="display:contents" dir="ltr"><figure id="ee162183-f2cf-4960-ab8b-044c98ad2d44" class="image"><a href="generated-image-1782537284586.png"><img src="generated-image-1782537284586.png"/></a><figcaption>Cognis: System Architecture and Flow</figcaption></figure></div><div style="display:contents" dir="auto"><h3 id="b275d54d-5698-4485-b0b4-82bef078b91c" class="">15.2 Technology Flow — What &amp; Why</h3></div><div style="display:contents" dir="auto"><p id="98d0d797-c80e-43c3-a6d0-049dae83b75d" class="">The same pipeline read top to bottom, with the technology and a one-line justification on every layer.</p></div><div style="display:contents" dir="ltr"><figure id="5e157bec-c483-4a76-ab4a-e91965d5d073" class="image"><a href="generated-image-1782537125434.png"><img src="generated-image-1782537125434.png"/></a><figcaption>How Cognis Works: Technology and Why</figcaption></figure></div><div style="display:contents" dir="auto"><h3 id="c704c422-3653-497a-974a-1c2f99cccb15" class="">15.3 Production Technology Stack</h3></div><div style="display:contents" dir="ltr"><table id="90e89c92-1987-4e9e-ba07-1832b571477a" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="7ce234db-01a5-4045-a4bb-eb26b7ad5fde"><th id="yXDj" class="simple-table-header-color simple-table-header">Layer</th><th id="@BqE" class="simple-table-header-color simple-table-header">Technology Used</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="32536f76-00d4-47eb-a11f-74fe91499cb1"><td id="yXDj" class=""><strong>Frontend</strong></td><td id="@BqE" class="">Next.js, Tailwind CSS</td></tr></div><div style="display:contents" dir="ltr"><tr id="b821dcd8-7288-4d77-a55d-ace5617ee91a"><td id="yXDj" class=""><strong>Backend / API</strong></td><td id="@BqE" class="">Spring Boot (Java)</td></tr></div><div style="display:contents" dir="ltr"><tr id="283addef-daac-4076-b5fd-b0dfb0ee3661"><td id="yXDj" class=""><strong>Database &amp; Auth</strong></td><td id="@BqE" class="">PostgreSQL, Supabase Auth</td></tr></div><div style="display:contents" dir="ltr"><tr id="41b29b81-f48c-4dab-8598-a49e5673a7a4"><td id="yXDj" class=""><strong>Streaming</strong></td><td id="@BqE" class="">Apache Kafka, Apache Flink</td></tr></div><div style="display:contents" dir="ltr"><tr id="a0d4e904-da61-4c11-94d2-cb05524b3023"><td id="yXDj" class=""><strong>Queue</strong></td><td id="@BqE" class="">RabbitMQ</td></tr></div><div style="display:contents" dir="ltr"><tr id="5d395c40-a378-4cac-bfc0-de7721776bae"><td id="yXDj" class=""><strong>Cache / Feature Store</strong></td><td id="@BqE" class="">Redis</td></tr></div><div style="display:contents" dir="ltr"><tr id="d56f1615-08e6-4f3d-a669-39a102bab780"><td id="yXDj" class=""><strong>Storage</strong></td><td id="@BqE" class="">Amazon S3</td></tr></div><div style="display:contents" dir="ltr"><tr id="2db6067e-4682-4e40-92cd-99dd8cbadb6b"><td id="yXDj" class=""><strong>ML &amp; NBA Engine</strong></td><td id="@BqE" class="">Python, XGBoost, FastAPI</td></tr></div><div style="display:contents" dir="ltr"><tr id="296bee2f-d025-4b8d-8920-2f5765550f75"><td id="yXDj" class=""><strong>Channels</strong></td><td id="@BqE" class="">SendGrid, Twilio, Firebase Cloud Messaging</td></tr></div><div style="display:contents" dir="ltr"><tr id="08320902-1e3f-4e7a-96f7-14723498c5db"><td id="yXDj" class=""><strong>Security</strong></td><td id="@BqE" class="">AES-256, TLS 1.3, AWS KMS</td></tr></div><div style="display:contents" dir="ltr"><tr id="730e635f-e621-4865-bf26-75169a8b763d"><td id="yXDj" class=""><strong>DevOps</strong></td><td id="@BqE" class="">Docker, Kubernetes, GitHub Actions</td></tr></div><div style="display:contents" dir="ltr"><tr id="53aceb33-d842-43ee-9a02-d967b884d6d2"><td id="yXDj" class=""><strong>Monitoring</strong></td><td id="@BqE" class="">Prometheus, Grafana</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="38d24bb3-6d0a-8004-a40b-ee93d5be5d73" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
