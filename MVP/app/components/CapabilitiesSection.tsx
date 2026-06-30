@@ -1,42 +1,43 @@
 import Image from "next/image";
 import { TypingAnimation } from "./ui/TypingAnimation";
+import { SpotlightCard } from "./ui/aceternity";
 
 const capabilities = [
   {
     number: "01",
-    title: "Understand",
-    description: "Interprets the event and identifies the goal behind it.",
+    title: "Ingest",
+    description: "Captures transactions, logins, and balance events as they happen.",
     image:
       "https://framerusercontent.com/images/Oae2ZGeAvKmGWTc7EAYDghMD4.png?width=1094&height=1260",
     tag: "[Cognis Event]",
     output:
-      "> scans customer events - detects money moment - groups similar signals - prioritizes the trigger",
+      "> receives salary credit - validates schema - streams event - updates customer timeline",
   },
   {
     number: "02",
-    title: "Execute",
-    description: "Runs the decision workflow step-by-step without manual intervention.",
+    title: "Detect",
+    description: "Finds patterns such as salary changes, low-balance streaks, and spend shifts.",
     image:
       "https://framerusercontent.com/images/T6goombZJEFI67hjbR2oFj8RT98.png?width=998&height=1254",
     tag: "Processing",
-    output: "Executing workflow.",
+    output: "Computing financial signals.",
   },
   {
     number: "03",
-    title: "Analyze",
-    description: "Processes customer context and generates useful engagement signals.",
+    title: "Decide",
+    description: "Ranks the next best action using customer context, rules, and model scores.",
     image: null,
-    tag: "> Analysing...",
-    output: "File Analysing",
+    tag: "> Decisioning...",
+    output: "NBA Scoring",
   },
   {
     number: "04",
-    title: "Iterate",
-    description: "Improves future actions based on outcomes, feedback, and context.",
+    title: "Engage",
+    description: "Delivers the action through app, email, SMS, or CRM and learns from the result.",
     image:
       "https://framerusercontent.com/images/WqJYmUMy6IArBxuG8vecDssbX4.png?width=6314&height=8355",
-    tag: "[USER INPUT]",
-    output: "Refined workflow with improved efficiency and smarter execution",
+    tag: "[CUSTOMER MOMENT]",
+    output: "Action delivered with reason, channel, and outcome tracked",
   },
 ] as const;
 
@@ -60,9 +61,9 @@ function CapabilityMock({
         <TypingAnimation
           as="p"
           className="mt-4 text-[17px] font-medium leading-[1.04] tracking-[-0.04em] text-[#d1c5bc]"
-          typeSpeed={44}
-          deleteSpeed={30}
-          pauseDelay={1400}
+          typeSpeed={88}
+          deleteSpeed={60}
+          pauseDelay={1700}
           loop
           cursorStyle="block"
         >
@@ -77,7 +78,7 @@ function CapabilityMock({
       <div className="absolute left-[17%] right-[17%] top-[18%] space-y-3">
         <div className="rounded-[10px] bg-white p-5 shadow-[0_18px_50px_rgba(0,0,0,0.12)]">
           <p className="mb-4 text-[13px] text-[#827367]">Task In Progress</p>
-          {["Understand the request", "Collect relevant data", "Generate outputs", "Deliver final output"].map(
+          {["Validate event", "Update profile", "Score actions", "Deliver message"].map(
             (item, index) => (
               <div key={item} className="mt-4 flex items-center gap-3">
                 <span
@@ -102,9 +103,9 @@ function CapabilityMock({
                 <TypingAnimation
                   as="p"
                   className="text-[20px] leading-none text-[#827367]"
-                  typeSpeed={58}
-                  deleteSpeed={36}
-                  pauseDelay={1300}
+                  typeSpeed={100}
+                  deleteSpeed={68}
+                  pauseDelay={1600}
                   loop
                   cursorStyle="line"
                 >
@@ -113,9 +114,9 @@ function CapabilityMock({
                 <TypingAnimation
                   as="p"
                   className="mt-1 max-w-[112px] text-[12px] leading-[1.05] text-[#d1c5bc]"
-                  typeSpeed={54}
-                  deleteSpeed={34}
-                  pauseDelay={1300}
+                  typeSpeed={96}
+                  deleteSpeed={64}
+                  pauseDelay={1600}
                   loop
                   cursorStyle="line"
                 >
@@ -140,9 +141,9 @@ function CapabilityMock({
             <span className="grid h-10 w-10 place-items-center rounded bg-[#f1ece8] text-[#827367]">⌘</span>
             <TypingAnimation
               as="span"
-              typeSpeed={56}
-              deleteSpeed={36}
-              pauseDelay={1300}
+              typeSpeed={96}
+              deleteSpeed={68}
+              pauseDelay={1600}
               loop
               cursorStyle="block"
             >
@@ -176,13 +177,13 @@ function CapabilityMock({
         <TypingAnimation
           as="p"
           className="mt-4 text-[17px] font-medium leading-[1.1] text-[#f1ece8]"
-          typeSpeed={52}
-          deleteSpeed={34}
-          pauseDelay={1300}
+          typeSpeed={92}
+          deleteSpeed={64}
+          pauseDelay={1600}
           loop
           cursorStyle="block"
         >
-          identifies workflow bottlenecks
+          checks eligibility and frequency caps
         </TypingAnimation>
       </div>
       <div>
@@ -194,9 +195,9 @@ function CapabilityMock({
         <TypingAnimation
           as="p"
           className="mt-4 text-[17px] font-medium leading-[1.1] text-[#f1ece8]"
-          typeSpeed={48}
-          deleteSpeed={32}
-          pauseDelay={1300}
+          typeSpeed={88}
+          deleteSpeed={60}
+          pauseDelay={1600}
           loop
           cursorStyle="block"
         >
@@ -209,22 +210,22 @@ function CapabilityMock({
 
 export function CapabilitiesSection() {
   return (
-    <section id="capabilities" className="bg-[#f1ece8] px-5 pb-[150px] pt-[30px]">
+    <section id="capabilities" className="bg-[#f1ece8] px-5 pb-[180px] pt-[100px]">
       <div className="mx-auto max-w-[1800px]">
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_600px]">
-          <h2 className="max-w-[860px] text-left [font-family:var(--font-mattone)] text-[clamp(54px,4.35vw,82px)] font-normal leading-[0.96] tracking-[-0.045em] text-black">
+          <h2 className="max-w-[700px] text-left [font-family:var(--font-mattone)] text-[clamp(38px,3.35vw,62px)] font-normal leading-[1] tracking-[-0.04em] text-black">
             Core Capabilities
           </h2>
-          <p className="max-w-[520px] justify-self-start text-left text-[21px] leading-[1.12] tracking-[-0.035em] text-[#4a4a4a] lg:justify-self-end">
-            Cognis is an intelligent AI agent designed to take over repetitive
-            and time-consuming banking tasks. From organizing information to
-            executing engagement workflows.
+          <p className="max-w-[480px] justify-self-start text-left text-[17px] leading-[1.26] tracking-[-0.025em] text-[#4a4a4a] lg:justify-self-end">
+            Cognis follows the full event-to-engagement loop: collect the
+            moment, update the customer profile, choose the next best action,
+            deliver it, and learn from the response.
           </p>
         </div>
 
         <div className="mt-[102px] grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {capabilities.map((item, index) => (
-            <article key={item.number} className="min-w-0">
+            <SpotlightCard key={item.number} className="min-w-0">
               <div className="relative aspect-[0.868] overflow-hidden bg-[#8f8176]">
                 {item.image ? (
                   <Image
@@ -240,18 +241,18 @@ export function CapabilitiesSection() {
               </div>
 
               <div className="mt-[23px] text-[#322c2b]">
-                <p className="text-[19px] leading-none tracking-[-0.03em] text-[#4a4a4a]">
+                <p className="text-[16px] leading-none tracking-[-0.03em] text-[#4a4a4a]">
                   {item.number}
                 </p>
                 <div className="mt-[16px] h-px w-full bg-[#c6b8ae]" />
-                <h3 className="mt-[18px] [font-family:var(--font-mattone)] text-[27px] font-normal leading-none tracking-[-0.045em] text-black">
+                <h3 className="mt-[18px] [font-family:var(--font-mattone)] text-[22px] font-normal leading-none tracking-[-0.04em] text-black">
                   {item.title}
                 </h3>
-                <p className="mt-[16px] max-w-[280px] text-[18px] leading-[1.16] tracking-[-0.035em] text-[#4a4a4a]">
+                <p className="mt-[14px] max-w-[280px] text-[15px] leading-[1.28] tracking-[-0.025em] text-[#4a4a4a]">
                   {item.description}
                 </p>
               </div>
-            </article>
+            </SpotlightCard>
           ))}
         </div>
       </div>

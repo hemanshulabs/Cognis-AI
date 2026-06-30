@@ -1,5 +1,7 @@
 import { AboutSection } from "./components/AboutSection";
 import { CapabilitiesSection } from "./components/CapabilitiesSection";
+import { FeaturesSection } from "./components/FeaturesSection";
+import { Footer } from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
 import { Navbar } from "./components/Navbar";
 
@@ -11,7 +13,9 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <CapabilitiesSection />
+        <FeaturesSection />
       </main>
+      <Footer />
     </div>
   );
 }

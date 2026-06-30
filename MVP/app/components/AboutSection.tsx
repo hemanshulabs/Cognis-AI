@@ -2,18 +2,18 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative flex w-full flex-col items-center overflow-hidden bg-[#f1ece8] px-5 pb-[120px] pt-[170px] text-[#322c2b]"
+      className="relative flex w-full flex-col items-center overflow-hidden bg-[#f1ece8] px-5 pb-[150px] pt-[190px] text-[#322c2b]"
     >
       <div className="mx-auto flex w-full max-w-[1620px] flex-col items-start">
-        <h2 className="text-left text-[clamp(56px,4.8vw,92px)] font-semibold leading-[0.96] tracking-[-0.07em] text-black">
-          Workflow Engine
+        <h2 className="text-left text-[clamp(40px,3.65vw,68px)] font-semibold leading-[1] tracking-[-0.055em] text-black">
+          Real-Time Engagement
         </h2>
 
-        <p className="mt-[26px] max-w-[505px] text-left text-[18px] leading-[1.22] tracking-[-0.035em] text-[#4a4a4a]">
-          Cognis is an intelligent AI agent designed to take over repetitive
-          and time-consuming tasks. From organizing information to executing
-          workflows, it works like a digital teammate that helps you stay
-          focused on what matters.
+        <p className="mt-[22px] max-w-[500px] text-left text-[16px] leading-[1.32] tracking-[-0.025em] text-[#4a4a4a]">
+          Cognis turns raw banking activity into useful digital engagement. It
+          watches transactions, balances, and app behavior, recognizes what is
+          happening in a customer&apos;s financial life, and responds with an action
+          that fits the moment.
         </p>
       </div>
 
