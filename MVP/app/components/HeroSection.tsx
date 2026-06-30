@@ -19,9 +19,9 @@ export function HeroSection() {
               data-hero-reveal
               className="mt-[clamp(18px,1.45vw,28px)] max-w-[560px] text-[clamp(14px,0.95vw,18px)] leading-[1.24] tracking-[-0.03em] text-[#4a4a4a]"
             >
-              A real-time financial engagement engine that detects customer
-              money moments, chooses the next best action, and reaches people
-              with timely, useful guidance.
+              From the Latin cognoscere, to recognize and know. Cognis is
+              the knowing mind behind every financial moment: it watches, it
+              understands, it acts.
             </p>
 
             <div data-hero-reveal className="mt-[clamp(22px,1.63vw,31px)] h-px w-full bg-[#827367]" />

@@ -9,7 +9,7 @@ const features = [
     label: "Sensis",
     title: "Sensis",
     description:
-      "Senses and ingests every transaction, login, and balance change the moment it happens.",
+      "Catches every transaction, login, and balance change the moment it happens, and passes it to Cognis.",
     image:
       "https://framerusercontent.com/images/Zwny8yIEU5A50O87WI1lESCLs.jpg?width=749&height=1402",
     items: [
@@ -24,7 +24,7 @@ const features = [
     label: "Memoris",
     title: "Memoris",
     description:
-      "Builds and remembers each customer's profile, identity, history, and live context.",
+      "Holds a single, living profile for each customer: balance, spending patterns, salary history, and derived traits.",
     image:
       "https://framerusercontent.com/images/XgHJUfVkDQ8l7dlse3Ydn8mlww.jpg?width=736&height=1308",
     items: [
@@ -39,7 +39,7 @@ const features = [
     label: "Auguris",
     title: "Auguris",
     description:
-      "Forecasts churn, propensity, financial stress, and likely customer needs from behavioural signals.",
+      "Reads behavioural signals to forecast churn risk, offer propensity, and financial stress before they surface.",
     image:
       "https://framerusercontent.com/images/axQ7KvT5PP5hUycMWkmcsyV9U.jpg?width=736&height=1308",
     items: [
@@ -54,7 +54,7 @@ const features = [
     label: "Lexis",
     title: "Lexis",
     description:
-      "Enforces eligibility, consent, frequency caps, and regulatory guardrails before any action reaches a customer.",
+      "Checks eligibility, consent, frequency caps, and regulatory guardrails so nothing reaches a customer it shouldn't.",
     image:
       "https://framerusercontent.com/images/ks3L0w2MpaU37xMsn3uC0B4kLM.jpg?width=736&height=1308",
     items: [
@@ -69,7 +69,7 @@ const features = [
     label: "Arbis",
     title: "Arbis",
     description:
-      "Weighs model scores, business value, rules, and customer need to pick the single best next action.",
+      "Weighs model scores against business value and customer need to pick the single best next action.",
     image:
       "https://framerusercontent.com/images/j8vwdDXoVsAJD2Rgf6u5D9CVk.png?width=1051&height=1496",
     items: [
@@ -84,7 +84,7 @@ const features = [
     label: "Nuntis",
     title: "Nuntis",
     description:
-      "Carries the chosen message to the right channel - app, email, SMS, or CRM - at the right moment.",
+      "Carries the chosen message to the right channel at the right moment, with delivery status tracked.",
     image:
       "https://framerusercontent.com/images/Zwny8yIEU5A50O87WI1lESCLs.jpg?width=749&height=1402",
     items: [
@@ -99,7 +99,7 @@ const features = [
     label: "Vigilis",
     title: "Vigilis",
     description:
-      "Watches outcomes, audits decisions, and feeds results back so each future call gets sharper.",
+      "Watches what happens after delivery and feeds the result back so every future decision is sharper than the last.",
     image:
       "https://framerusercontent.com/images/XgHJUfVkDQ8l7dlse3Ydn8mlww.jpg?width=736&height=1308",
     items: [
@@ -269,9 +269,10 @@ export function FeaturesSection() {
             data-reveal-copy
             className="mt-6 max-w-[560px] text-[clamp(15px,0.98vw,18px)] leading-[1.28] tracking-[-0.03em] text-[#827367]"
           >
-            Cognis is the parent orchestrator. It delegates each money moment
-            to specialist child agents, each owning one job from event capture
-            to decision, delivery, monitoring, and learning.
+            Cognis is the parent orchestrator. Each specialist child agent
+            handles one job in the pipeline, from catching the event,
+            through prediction, compliance, and decision, to delivery and
+            learning.
           </p>
 
           <nav

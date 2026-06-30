@@ -6,7 +6,7 @@ const capabilities = [
   {
     number: "01",
     title: "Ingest",
-    description: "Captures transactions, logins, and balance events as they happen.",
+    description: "Picks up transactions, logins, and balance changes the moment they occur.",
     image:
       "https://framerusercontent.com/images/Oae2ZGeAvKmGWTc7EAYDghMD4.png?width=1094&height=1260",
     tag: "[Cognis Event]",
@@ -16,7 +16,7 @@ const capabilities = [
   {
     number: "02",
     title: "Detect",
-    description: "Finds patterns such as salary changes, low-balance streaks, and spend shifts.",
+    description: "Spots salary changes, low-balance streaks, and shifts in spending behaviour.",
     image:
       "https://framerusercontent.com/images/T6goombZJEFI67hjbR2oFj8RT98.png?width=998&height=1254",
     tag: "Processing",
@@ -33,7 +33,7 @@ const capabilities = [
   {
     number: "04",
     title: "Engage",
-    description: "Delivers the action through app, email, SMS, or CRM and learns from the result.",
+    description: "Delivers the chosen action through app, email, SMS, or CRM and tracks the result.",
     image:
       "https://framerusercontent.com/images/WqJYmUMy6IArBxuG8vecDssbX4.png?width=6314&height=8355",
     tag: "[CUSTOMER MOMENT]",
@@ -227,9 +227,9 @@ export function CapabilitiesSection() {
             data-reveal-copy
             className="max-w-[480px] justify-self-start text-left text-[17px] leading-[1.26] tracking-[-0.025em] text-[#4a4a4a] lg:justify-self-end"
           >
-            Cognis follows the full event-to-engagement loop: collect the
-            moment, update the customer profile, choose the next best action,
-            deliver it, and learn from the response.
+            Cognis follows the full event-to-engagement loop: catch the
+            moment, understand the customer, pick the right action, deliver
+            it, and learn from what happens next.
           </p>
         </div>
 

@@ -17,10 +17,12 @@ export function AboutSection() {
           data-reveal-copy
           className="mt-[22px] max-w-[500px] text-left text-[16px] leading-[1.32] tracking-[-0.025em] text-[#4a4a4a]"
         >
-          Cognis turns raw banking activity into useful digital engagement. It
-          watches transactions, balances, and app behavior, recognizes what is
-          happening in a customer&apos;s financial life, and responds with an action
-          that fits the moment.
+          A salary credit lands. A balance dips below a threshold. An EMI is
+          due tomorrow. These are the moments that shape a customer&apos;s
+          financial life, and most banks miss them by hours, or days.
+          Cognis catches them as they happen, understands what they mean for
+          each person, and responds with something genuinely useful, right when
+          it matters.
         </p>
       </div>
 

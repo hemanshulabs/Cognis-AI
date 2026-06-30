@@ -10,33 +10,33 @@ import {
 
 const impactItems = [
   {
-    title: "Save Time",
-    description: "Eliminate time-consuming processes through intelligent automation.",
+    title: "Catches Moments As They Happen",
+    description: "A payment clears, a balance dips, a salary lands. Cognis picks it up the instant it occurs.",
     Icon: Clock3,
   },
   {
-    title: "Reduce Manual Work",
-    description: "Eliminate routine processes across your workflows",
+    title: "One Profile, Not Five Dashboards",
+    description: "Each customer's balance, spending, and history stay in a single, always-current view.",
     Icon: DraftingCompass,
   },
   {
-    title: "Faster Execution",
-    description: "Complete tasks quicker with consistent, reliable outputs",
+    title: "Spots the Patterns That Matter",
+    description: "How much someone spent this month, how long a balance has stayed low, or when a salary changed.",
     Icon: ZapIcon,
   },
   {
-    title: "Focus on What Matters",
-    description: "Spend more time on high-impact work, not busywork",
+    title: "Built Around Real Moments",
+    description: "When a raise lands or a month turns tight, the response fits the moment rather than a fixed schedule.",
     Icon: PencilLine,
   },
   {
-    title: "Consistent Results",
-    description: "Deliver structured, repeatable decisions across every customer workflow.",
+    title: "Compliance Comes First",
+    description: "Nothing reaches a customer until eligibility, consent, and frequency caps have been checked.",
     Icon: Sparkles,
   },
   {
-    title: "Improve Productivity",
-    description: "Increase engagement efficiency without increasing team effort.",
+    title: "Learns From Every Outcome",
+    description: "Each response sharpens the next decision. Open, click, ignore, or convert feeds back into the system.",
     Icon: PanelsTopLeft,
   },
 ] as const;
@@ -61,14 +61,14 @@ export function ImpactSection() {
             data-reveal-title
             className="[font-family:var(--font-geist-sans)] text-[clamp(46px,4vw,76px)] font-medium leading-[0.98] tracking-[-0.065em] text-black"
           >
-            How AgenticX Helps
+            How It Works
           </h2>
           <p
             data-reveal-copy
             className="mx-auto mt-5 max-w-[590px] text-[clamp(16px,0.92vw,18px)] leading-[1.12] tracking-[-0.025em] text-[#4a4a4a]"
           >
-            Discover how AgenticX automates repetitive workflows, improves execution
-            speed, and helps teams operate more efficiently.
+            From the moment an event lands to the message that goes back out,
+            here is what Cognis actually does at each step.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export function ImpactSection() {
             >
               <ImpactIcon Icon={item.Icon} />
               <div className="min-w-0 pt-[5px]">
-                <h3 className="text-[clamp(21px,1.18vw,24px)] font-medium leading-none tracking-[-0.035em] text-black">
+                <h3 className="text-[clamp(16px,0.9vw,19px)] font-medium leading-[1.15] tracking-[-0.02em] text-black">
                   {item.title}
                 </h3>
                 <p className="mt-[11px] max-w-[285px] text-[clamp(15px,0.88vw,17px)] leading-[1.16] tracking-[-0.025em] text-[#4a4a4a]">
