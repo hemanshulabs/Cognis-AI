@@ -210,13 +210,23 @@ function CapabilityMock({
 
 export function CapabilitiesSection() {
   return (
-    <section id="capabilities" className="bg-[#f1ece8] px-5 pb-[180px] pt-[100px]">
+    <section
+      id="capabilities"
+      data-section-reveal
+      className="bg-[#f1ece8] px-5 pb-[180px] pt-[100px]"
+    >
       <div className="mx-auto max-w-[1800px]">
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_600px]">
-          <h2 className="max-w-[700px] text-left [font-family:var(--font-mattone)] text-[clamp(38px,3.35vw,62px)] font-normal leading-[1] tracking-[-0.04em] text-black">
+          <h2
+            data-reveal-title
+            className="max-w-[700px] text-left [font-family:var(--font-mattone)] text-[clamp(38px,3.35vw,62px)] font-normal leading-[1] tracking-[-0.04em] text-black"
+          >
             Core Capabilities
           </h2>
-          <p className="max-w-[480px] justify-self-start text-left text-[17px] leading-[1.26] tracking-[-0.025em] text-[#4a4a4a] lg:justify-self-end">
+          <p
+            data-reveal-copy
+            className="max-w-[480px] justify-self-start text-left text-[17px] leading-[1.26] tracking-[-0.025em] text-[#4a4a4a] lg:justify-self-end"
+          >
             Cognis follows the full event-to-engagement loop: collect the
             moment, update the customer profile, choose the next best action,
             deliver it, and learn from the response.
@@ -225,7 +235,7 @@ export function CapabilitiesSection() {
 
         <div className="mt-[102px] grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {capabilities.map((item, index) => (
-            <SpotlightCard key={item.number} className="min-w-0">
+            <SpotlightCard key={item.number} data-reveal-card className="min-w-0">
               <div className="relative aspect-[0.868] overflow-hidden bg-[#8f8176]">
                 {item.image ? (
                   <Image

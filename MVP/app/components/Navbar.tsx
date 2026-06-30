@@ -118,7 +118,7 @@ export function Navbar() {
           className="h-[clamp(50px,3.55vw,68px)] w-[clamp(184px,11.7vw,224px)]"
           innerClassName="text-[clamp(13px,0.9vw,17px)] font-semibold tracking-[-0.03em]"
         >
-          Explore Agents
+          Agentic Pipeline
         </MovingBorderLink>
       </nav>
     </header>

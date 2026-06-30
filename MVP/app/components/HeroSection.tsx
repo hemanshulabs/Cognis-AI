@@ -8,17 +8,23 @@ export function HeroSection() {
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.22),rgba(255,255,255,0)_48%)]" />
 
           <div className="absolute left-[clamp(38px,3.16vw,60px)] top-[34.1vh] z-10 w-[calc(100%-clamp(76px,6.32vw,120px))] max-w-[830px]">
-            <h1 className="[font-family:var(--font-mattone)] text-[clamp(56px,5.5vw,104px)] font-normal leading-none tracking-[-0.04em] text-black">
+            <h1
+              data-hero-reveal
+              className="[font-family:var(--font-mattone)] text-[clamp(56px,5.5vw,104px)] font-normal leading-none tracking-[-0.04em] text-black"
+            >
               Cognis
             </h1>
 
-            <p className="mt-[clamp(18px,1.45vw,28px)] max-w-[560px] text-[clamp(14px,0.95vw,18px)] leading-[1.24] tracking-[-0.03em] text-[#4a4a4a]">
+            <p
+              data-hero-reveal
+              className="mt-[clamp(18px,1.45vw,28px)] max-w-[560px] text-[clamp(14px,0.95vw,18px)] leading-[1.24] tracking-[-0.03em] text-[#4a4a4a]"
+            >
               A real-time financial engagement engine that detects customer
               money moments, chooses the next best action, and reaches people
               with timely, useful guidance.
             </p>
 
-            <div className="mt-[clamp(22px,1.63vw,31px)] h-px w-full bg-[#827367]" />
+            <div data-hero-reveal className="mt-[clamp(22px,1.63vw,31px)] h-px w-full bg-[#827367]" />
 
             <MovingBorderLink
               href="#features"

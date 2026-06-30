@@ -254,14 +254,21 @@ export function FeaturesSection() {
   return (
     <section
       id="features"
+      data-section-reveal
       className="bg-[#f1ece8] px-5 pb-[110px] pt-[104px] text-[#322c2b]"
     >
       <div className="mx-auto grid max-w-[1800px] gap-12 lg:grid-cols-[minmax(0,870px)_760px] lg:gap-[30px]">
         <div className="lg:sticky lg:top-[112px] lg:h-[calc(100vh-112px)]">
-          <h2 className="[font-family:var(--font-mattone)] text-[clamp(44px,4.3vw,78px)] font-normal leading-[0.98] tracking-[-0.055em] text-black">
+          <h2
+            data-reveal-title
+            className="[font-family:var(--font-mattone)] text-[clamp(44px,4.3vw,78px)] font-normal leading-[0.98] tracking-[-0.055em] text-black"
+          >
             Sub-Agents
           </h2>
-          <p className="mt-6 max-w-[560px] text-[clamp(15px,0.98vw,18px)] leading-[1.28] tracking-[-0.03em] text-[#827367]">
+          <p
+            data-reveal-copy
+            className="mt-6 max-w-[560px] text-[clamp(15px,0.98vw,18px)] leading-[1.28] tracking-[-0.03em] text-[#827367]"
+          >
             Cognis is the parent orchestrator. It delegates each money moment
             to specialist child agents, each owning one job from event capture
             to decision, delivery, monitoring, and learning.
@@ -299,6 +306,7 @@ export function FeaturesSection() {
             <article
               key={feature.id}
               id={`feature-${feature.id}`}
+              data-reveal-card
               className="grid scroll-mt-36 overflow-hidden rounded-[4px] bg-white p-[10px] md:grid-cols-[minmax(0,1fr)_330px] lg:grid-cols-[370px_370px]"
             >
               <div className="flex min-h-[410px] flex-col p-6 md:p-[16px_16px_28px_16px] lg:p-[20px_16px_28px_16px]">
